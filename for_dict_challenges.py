@@ -5,7 +5,7 @@ from collections import Counter
 # Вася: 1
 # Маша: 2
 # Петя: 2
-
+'''''
 students = [
     {'first_name': 'Вася'},
     {'first_name': 'Петя'},
@@ -27,6 +27,7 @@ for name in dict_name:
 # Дан список учеников, нужно вывести самое часто повторящееся имя
 # Пример вывода:
 # Самое частое имя среди учеников: Маша
+'''''
 students = [
     {'first_name': 'Вася'},
     {'first_name': 'Петя'},
@@ -34,11 +35,17 @@ students = [
     {'first_name': 'Маша'},
     {'first_name': 'Оля'},
 ]
-most_common_student = Counter(student['first_name']
-        for student in students).most_common(1)
-print(f'Самое частое имя среди учеников: {most_common_student[0][0]}')
+famous_name = ()
+famous_name_count = 0
+i = [name['first_name'] for name in students] 
+for name in i:
+    if i.count(name) > famous_name_count:
+        famous_name_count = i.count(name)
+        famous_name = name
+print(f'Самое частое имя среди учеников: {famous_name}')
 
-# Задание 3
+''''' 
+        # Задание 3
 # Есть список учеников в нескольких классах, нужно вывести самое частое имя в каждом классе.
 # Пример вывода:
 # Самое частое имя в классе 1: Вася
@@ -148,3 +155,4 @@ for i in school:
     girls = 0
     boys = 0
     
+'''''
